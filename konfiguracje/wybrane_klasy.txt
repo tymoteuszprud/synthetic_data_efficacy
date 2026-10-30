@@ -1,0 +1,30 @@
+archery
+baseball
+basketball
+billiards
+bmx
+bowling
+boxing
+canoe slalom
+figure skating women
+football
+formula 1 racing
+giant slalom
+golf
+hammer throw
+horse racing
+hurdles
+javelin
+motorcycle racing
+pole vault
+rock climbing
+rowing
+rugby
+ski jumping
+skydiving
+surfing
+swimming
+table tennis
+tennis
+volleyball
+weightlifting

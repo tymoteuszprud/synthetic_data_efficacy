@@ -1,0 +1,11 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B-Base",
+  "epochs": 1,
+  "finetune_epochs": 1,
+  "pretrain_epochs": 1,
+  "learning_rate": 2e-05,
+  "finetune_learning_rate": 5e-06,
+  "pretrain_learning_rate": 2e-05,
+  "max_seq_length": 512,
+  "microbatch_100": null
+}

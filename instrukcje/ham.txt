@@ -1,0 +1,13 @@
+Generate exactly 25 realistic HAM SMS messages in the requested JSON structure.
+Each message in the output array must be labeled as "ham".
+
+Constraints for each message:
+1. Keep the length realistic for typical SMS (40 to 160 characters). 
+2. Follow the general style, tone, spelling/grammar shortcuts, and structure shown in the examples. I beg you, do not start the message with "Hey!".
+3. Ensure high semantic variability across all messages to prevent repetition.
+4. Output the result in the requested JSON structure where each item's label is "ham".
+
+Here are 7 examples of HAM messages:
+{examples_str}
+
+{seed_instruction}

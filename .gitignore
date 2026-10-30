@@ -1,0 +1,46 @@
+# Dane i wyniki pozostają lokalne.
+dane/
+wyniki/
+results/
+experiments_archive/
+pretrain_cache/
+cache_pretrain_*/
+balanced_experiment_outputs/
+job_queue.csv
+*.csv
+!konfiguracje/*.csv
+
+# Wagi, cache i materiały wygenerowane.
+*.safetensors
+*.gguf
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.h5
+*.npz
+*.npy
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.zip
+unsloth_compiled_cache/
+.cache/
+
+# Środowiska i ustawienia lokalne.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+materialy/slownik_angielski.json
+materialy/slownik_angielski.source.json
+.aws/
+.vscode/
+.idea/
+*.log
+*.lock
+.DS_Store
+Thumbs.db

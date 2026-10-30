@@ -1,0 +1,1902 @@
+[
+  {
+    "variant": "A",
+    "budget": 1,
+    "exp_id": "A_1pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 1e-05,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 1
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Pretrain",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "A",
+    "budget": 3,
+    "exp_id": "A_3pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 1e-05,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 3
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Pretrain",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "A",
+    "budget": 10,
+    "exp_id": "A_10pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 1e-05,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 10
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Pretrain",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "A",
+    "budget": 30,
+    "exp_id": "A_30pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 1e-05,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 30
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Pretrain",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "A",
+    "budget": 100,
+    "exp_id": "A_100pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 1e-05,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 100
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Pretrain",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "B",
+    "budget": 1,
+    "exp_id": "B_1pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 1
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "B",
+    "budget": 3,
+    "exp_id": "B_3pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 3
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "B",
+    "budget": 10,
+    "exp_id": "B_10pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 10
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "B",
+    "budget": 30,
+    "exp_id": "B_30pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 30
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "B",
+    "budget": 100,
+    "exp_id": "B_100pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "C",
+    "budget": 1,
+    "exp_id": "C_1pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 1
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "C",
+    "budget": 3,
+    "exp_id": "C_3pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 3
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "C",
+    "budget": 10,
+    "exp_id": "C_10pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 10
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "C",
+    "budget": 30,
+    "exp_id": "C_30pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 30
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "C",
+    "budget": 100,
+    "exp_id": "C_100pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 100
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "D",
+    "budget": 1,
+    "exp_id": "D_1pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 1
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "D",
+    "budget": 3,
+    "exp_id": "D_3pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 3
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "D",
+    "budget": 10,
+    "exp_id": "D_10pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 10
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "D",
+    "budget": 30,
+    "exp_id": "D_30pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 30
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "D",
+    "budget": 100,
+    "exp_id": "D_100pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.05,
+        "l2": 0.1,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      },
+      "lr_pretrain": 0.00015
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 100
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Mix",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "E",
+    "budget": 1,
+    "exp_id": "E_1pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "lr_pretrain": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.1,
+        "l2": 0.15,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      }
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 0
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Main",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 1
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "E",
+    "budget": 3,
+    "exp_id": "E_3pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "lr_pretrain": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.1,
+        "l2": 0.15,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      }
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 0
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Main",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 3
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "E",
+    "budget": 10,
+    "exp_id": "E_10pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "lr_pretrain": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.1,
+        "l2": 0.15,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      }
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 0
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Main",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 10
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "E",
+    "budget": 30,
+    "exp_id": "E_30pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "lr_pretrain": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.1,
+        "l2": 0.15,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      }
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 0
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Main",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 30
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  },
+  {
+    "variant": "E",
+    "budget": 100,
+    "exp_id": "E_100pct",
+    "runs_total": 3,
+    "runs_done": 0,
+    "seed_base": 42,
+    "params": {
+      "epochs": 50,
+      "batch_size": 64,
+      "lr": 0.00015,
+      "lr_pretrain": 0.00015,
+      "wd": 0.01,
+      "dropout": 0.5,
+      "label_smoothing": 0.1,
+      "opt": "AdamW",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "sched": "CosineAnnealingLR",
+      "sched_p": {
+        "T_max": 50,
+        "eta_min": 1e-05
+      },
+      "mults": {
+        "stem": 0.05,
+        "l1": 0.1,
+        "l2": 0.15,
+        "l3": 0.5,
+        "l4": 1.0,
+        "fc": 1.0
+      }
+    },
+    "auto_save": true,
+    "aggregate_results": true,
+    "data_sources": [
+      {
+        "id": 1,
+        "path": "obrazy_rzeczywiste",
+        "domain": "Real",
+        "role": "Main",
+        "is_val_test": true,
+        "val_pct": 15,
+        "test_pct": 15,
+        "train_pct": 0
+      },
+      {
+        "id": 2,
+        "path": "obrazy_syntetyczne",
+        "domain": "Synthetic",
+        "role": "Main",
+        "is_val_test": false,
+        "val_pct": 0,
+        "test_pct": 0,
+        "train_pct": 100
+      }
+    ],
+    "cfg_mix": {
+      "use_mix": false,
+      "train": {
+        "real_pct": 50
+      },
+      "val": {
+        "real_pct": 100
+      },
+      "test": {
+        "real_pct": 100
+      }
+    },
+    "use_augmentation": true,
+    "aug_params": {
+      "crop_scale": 0.8,
+      "rot_deg": 15,
+      "jit_f": 0.2
+    },
+    "dataset_for_stats": "ImageNet",
+    "manifest_path": "manifest_obrazow.json",
+    "class_file": "konfiguracje/klasy_obrazow.csv"
+  }
+]
