@@ -9,6 +9,7 @@ balanced_experiment_outputs/
 job_queue.csv
 *.csv
 !konfiguracje/*.csv
+!wyniki_pracy/*.csv
 
 # Wagi, cache i materiały wygenerowane.
 *.safetensors

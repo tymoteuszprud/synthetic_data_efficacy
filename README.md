@@ -15,6 +15,7 @@ Repozytorium zawiera kod eksperymentów dotyczących wykorzystania danych syntet
 | `materialy` | Słownictwo pomocnicze do generowania wiadomości |
 | `wymagania`, `srodowiska` | Zależności i wersje bibliotek |
 | `tests` | Testy wykonywane bez modeli i bez GPU |
+| `wyniki_pracy` | Wyniki liczbowe eksperymentów przedstawionych w pracy |
 
 ## 2. Środowisko wykonawcze
 
@@ -168,7 +169,7 @@ Warianty uczenia obejmują:
 
 Domyślna konfiguracja obejmuje budżety 1%, 3%, 10%, 30% i 100% oraz ziarna 42, 43 i 44. Przykłady referencyjne pozostają w części treningowej i są wyłączone z walidacji oraz testu. Budżet 100% oznacza pełną dostępną pulę treningową.
 
-Wycinki rzeczywiste są zagnieżdżone w obrębie danego ziarna: do stałych referencji dodawane są coraz dłuższe początkowe fragmenty jednej permutacji pozostałej puli treningowej. Wycinki syntetyczne wariantów C i E powstają analogicznie z jednej permutacji zbioru syntetycznego. Zwiększenie budżetu zachowuje wszystkie przykłady mniejszego wycinka. Przy włączonym losowaniu klas zasada dotyczy puli wejściowej; późniejsze losowanie ze zwracaniem nie gwarantuje zagnieżdżenia faktycznie wylosowanych wystąpień. Reguła zagnieżdżania dotyczy uruchomień tej wersji kodu; nie zmienia zapisanych wyników wcześniejszych uruchomień.
+Wycinki rzeczywiste są zagnieżdżone w obrębie danego ziarna: do stałych referencji dodawane są coraz dłuższe początkowe fragmenty jednej permutacji pozostałej puli treningowej. Wycinki syntetyczne wariantów C i E powstają analogicznie z jednej permutacji zbioru syntetycznego. Zwiększenie budżetu zachowuje wszystkie przykłady mniejszego wycinka. Przy włączonym losowaniu klas zasada dotyczy puli wejściowej; późniejsze losowanie ze zwracaniem nie gwarantuje zagnieżdżenia faktycznie wylosowanych wystąpień.
 
 Kontrola danych bez ładowania modelu:
 
@@ -190,7 +191,7 @@ python -m wiadomosci.eksperymenty --data-dir dane/tekst --balanced --train
 
 Oba tryby korzystają z jednego modułu `wiadomosci/rdzen.py`. Argument `--balanced` zmienia losowanie wystąpień treningowych, a nie procedurę oceny. Audyt i trening wyznaczają etapy tą samą funkcją oraz porównują kolejność identyfikatorów próbek przed rozpoczęciem uczenia. Wariant A obejmuje domyślnie jedną epokę na całym zbiorze syntetycznym i jedną na wycinku rzeczywistym; pozostałe warianty po jednej epoce.
 
-Wspólna ocena porównuje logity pierwszych tokenów etykiet HAM i SPAM, zgodnie z podstawową procedurą eksperymentu. Końcowa klasyfikacja i strata korzystają z rozmiaru partii ustalonego dla treningu, a klasyfikacja walidacyjna z partii o rozmiarze 8. Strata jest średnią strat partii; maskowane są tokeny o identyfikatorze dopełnienia, wspólnym z `<|im_end|>`. Jest to nowa wspólna ścieżka również dla losowania klas, dlatego nie należy utożsamiać jej wyników z wcześniejszymi wynikami odrębnego modułu równoważącego. Pamięć ukończonego etapu wstępnego jest oddzielona według trybu, konfiguracji i danych oraz ziarna; jej pochodzenie i identyfikatory próbek są sprawdzane przed użyciem.
+Wspólna ocena porównuje logity pierwszych tokenów etykiet HAM i SPAM, zgodnie z podstawową procedurą eksperymentu. Końcowa klasyfikacja i strata korzystają z rozmiaru partii ustalonego dla treningu, a klasyfikacja walidacyjna z partii o rozmiarze 8. Strata jest średnią strat partii; maskowane są tokeny o identyfikatorze dopełnienia, wspólnym z `<|im_end|>`. Pamięć ukończonego etapu wstępnego jest oddzielona według trybu, konfiguracji i danych oraz ziarna; jej pochodzenie i identyfikatory próbek są sprawdzane przed użyciem.
 
 Zakres uruchomień ograniczają argumenty `--variants`, `--seeds` i `--budgets`. Parametry modelu, współczynniki uczenia i liczby epok określa plik konfiguracji. Wyniki, historie walidacji i identyfikatory próbek są zapisywane w `wyniki/tekst/<identyfikator>`.
 
@@ -268,4 +269,8 @@ python -m unittest discover -s tests -v
 
 Kontrole obejmują składnię kodu i konfiguracji, rozłączność podziałów, skład wariantów, losowanie klas, agregację wyników oraz obliczenia podobieństwa. Testy są wykonywane bez pobierania modeli i uruchamiania treningów. Identyfikatory próbek, konfiguracje i wyniki pozostają zapisywane oddzielnie dla poszczególnych uruchomień.
 
-Liczebności wygenerowanych obrazów odpowiadają liczebnościom każdej wybranej klasy rzeczywistej; dla domyślnego wykazu celem jest 4683 obrazów. Podzbiory treningowe wyznaczane są dynamicznie według poziomu budżetu. Nowe reguły podziału i wspólna ewaluacja SMS obowiązują w tej wersji kodu; nie zmieniają pochodzenia wyników zapisanych starszymi wersjami.
+Liczebności wygenerowanych obrazów odpowiadają liczebnościom każdej wybranej klasy rzeczywistej; dla domyślnego wykazu celem jest 4683 obrazów. Podzbiory treningowe wyznaczane są dynamicznie według poziomu budżetu.
+
+## 9. Wyniki eksperymentów
+
+Katalog `wyniki_pracy` zawiera wyniki poszczególnych uruchomień oraz zestawienia średnich i odchyleń standardowych eksperymentów obrazowych i tekstowych. Opis plików, jednostek i sposobu agregacji zamieszczono w [dokumentacji wyników](wyniki_pracy/README.md). Zestawienia stanowią zapis przeprowadzonych eksperymentów; ponowne uruchomienie kodu nie gwarantuje identycznych wartości liczbowych.
